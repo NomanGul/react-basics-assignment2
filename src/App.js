@@ -46,26 +46,45 @@ class AuthorIntro extends Component {
   }
 }
 
+const world = 'World';
+const pakistan = 'Pakistan';
 
 class Q1 extends Component {
-
+  // CONSTRUCTOR
   constructor(props) {
     super(props);
     this.state = {
-      text: 'Hello World',
+      text: pakistan,
       boolean: true
     };
   }
-
+  // TOGGLER FUNCTION
+  changeHeading() {
+    return this.setState ({
+      text: this.state.boolean ? world : pakistan,
+      boolean: !this.state.boolean
+    })
+  }
+  // RENDER
   render() {
     return (
-      <div>
-        <h1>{this.state.text}</h1>
+      <div className="center q1">
+        <h1 className="headingQ1 white-text">Hello {this.state.text}</h1>
+        <button className="waves-effect waves-light btn-large pulse green" onClick={() => this.changeHeading()}>toggler</button>
       </div>
     )
   }
 }
 
+class Q2 extends Component{
+  render() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
+}
 class App extends Component {
   render() {
     return (
@@ -75,7 +94,7 @@ class App extends Component {
         <div className = "container">
           <AuthorIntro />
           <Q1 />
-
+          <Q2 />
         </div>
       </div>
     );

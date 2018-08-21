@@ -1,3 +1,11 @@
+body{
+  bottom: 0;
+  margin-bottom: 0px;
+}
+.App{
+  background: linear-gradient(#64e680, #9198e5);
+  bottom: 0;
+}
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 60px;
@@ -7,6 +15,13 @@
   cursor: pointer;
 }
 
+.headingQ1{
+  margin-top: 15vh;
+}
+
+.btn-large{
+  margin-top: 20vh;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
