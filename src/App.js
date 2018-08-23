@@ -14,7 +14,9 @@ class Navbar extends Component {
         <div className="navbar-fixed">
           <nav>
             <div className="nav-wrapper grey darken-3 z-depth-4">
-              <a className="brand-logo center"><img src={logo} className="App-logo center-align" alt="logo" /></a>
+              <a className="brand-logo center">
+                <img src={logo} className="App-logo center-align" alt="logo" />
+              </a>
             </div>
           </nav>
         </div>
@@ -35,7 +37,8 @@ class AuthorIntro extends Component {
                   <img src={myImg} alt="Author" className="circle responsive-img" />
                 </div>
                 <div className="col s10">
-                  <span className="white-text"> This React project is developed by Noman Gul. I hope you like this, So dont forget to give your feedback!</span>
+                  <span className="white-text">This React project is developed by Noman Gul. 
+                  I hope you like this, So dont forget to give your feedback!</span>
                 </div>
               </div>
             </div>
@@ -46,31 +49,31 @@ class AuthorIntro extends Component {
   }
 }
 
-const world = 'World';
-const pakistan = 'Pakistan';
-
 class Q1 extends Component {
   // CONSTRUCTOR
   constructor(props) {
     super(props);
     this.state = {
-      text: pakistan,
-      boolean: true
+      pakistan: true
     };
   }
   // TOGGLER FUNCTION
   changeHeading() {
     return this.setState ({
-      text: this.state.boolean ? world : pakistan,
-      boolean: !this.state.boolean
+      pakistan: !this.state.pakistan
     })
   }
   // RENDER
   render() {
     return (
       <div className="center q1">
-        <h1 className="headingQ1 white-text">Hello {this.state.text}</h1>
-        <button className="waves-effect waves-light btn-large pulse green" onClick={() => this.changeHeading()}>toggler</button>
+        <h1 className="headingQ1 green-text">Hello {this.state.pakistan ? 'Pakistan' : 'World'}</h1>
+        <button className="btn-large pulse green" 
+                /*onClick={this.changeHeading()}*/
+                onClick={() => this.changeHeading()}
+                /*onClick={this.changeHeading.bind(this)}*/>
+          toggler
+        </button>
       </div>
     )
   }

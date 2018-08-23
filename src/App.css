@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 body{
   bottom: 0;
   margin-bottom: 0px;
 }
-.App{
+/* .App{
   background: linear-gradient(#64e680, #9198e5);
   bottom: 0;
-}
+} */
 .App-logo {
   animation: App-logo-spin infinite 5s linear;
   height: 60px;
@@ -17,6 +18,7 @@ body{
 
 .headingQ1{
   margin-top: 15vh;
+  font-family: 'Lobster', sans-serif;
 }
 
 .btn-large{
