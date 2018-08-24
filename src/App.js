@@ -1,7 +1,3 @@
-// 1) Using states, render a text "Hello World", on clicking it, it should toggle to "Hello Pakistan", and vice versa! 
-// 2) Write the difference between onClick={this.myFunc()}, onClick={() => this.myFunc()} & onClick={this.myFunc.bind(this}}
-
-
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -68,10 +64,7 @@ class Q1 extends Component {
     return (
       <div className="center q1">
         <h1 className="headingQ1 green-text">Hello {this.state.pakistan ? 'Pakistan' : 'World'}</h1>
-        <button className="btn-large pulse green" 
-                /*onClick={this.changeHeading()}*/
-                onClick={() => this.changeHeading()}
-                /*onClick={this.changeHeading.bind(this)}*/>
+        <button className="btn-large pulse green" onClick={() => this.changeHeading()}>
           toggler
         </button>
       </div>
@@ -79,25 +72,15 @@ class Q1 extends Component {
   }
 }
 
-class Q2 extends Component{
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
-}
+// MAIN CLASS
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navbar />
-
         <div className = "container">
           <AuthorIntro />
           <Q1 />
-          <Q2 />
         </div>
       </div>
     );
