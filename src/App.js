@@ -63,7 +63,7 @@ class Q1 extends Component {
   render() {
     return (
       <div className="center q1">
-        <h1 className="headingQ1 green-text">Hello {this.state.pakistan ? 'Pakistan' : 'World'}</h1>
+        <h1 className="headingQ1 green-text">Hello<br /> {this.state.pakistan ? 'Pakistan' : 'World'}</h1>
         <button className="btn-large pulse green" onClick={() => this.changeHeading()}>
           toggler
         </button>
